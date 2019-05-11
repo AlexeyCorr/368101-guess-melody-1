@@ -5,9 +5,9 @@ import renderer from 'react-test-renderer';
 it(`renders correctly`, () => {
   const tree = renderer
     .create(<WelcomeScreen
-      time={0}
+      gameTime={0}
       errorCount={0}
-      onClickButtonStart={jest.fn()}
+      onClick={jest.fn()}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();
